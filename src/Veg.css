@@ -1,0 +1,113 @@
+/* Container styling */
+.veg-container {
+    padding: 30px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  /* Heading */
+  h1 {
+    color: green;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Filter Section */
+  .filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-container label {
+    font-size: 16px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  /* Search Bar */
+  .search-container {
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Veg List */
+  .veg-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .veg-list li {
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+  
+  .veg-list button {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .veg-list button:hover {
+    background-color: darkgreen;
+  }
+  
+  /* Pagination Buttons */
+  .pagination {
+    margin-top: 20px;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 8px 12px;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: darkblue;
+  }
+  
+  button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+  }
+  .veg-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.veg-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+  

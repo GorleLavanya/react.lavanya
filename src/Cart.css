@@ -1,0 +1,126 @@
+/* Cart Component Styles */
+.cart-container {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f9f9f9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cart-container h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-items li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.increment, .decrement {
+    background-color: #28a745;
+    color: white;
+}
+
+.increment:hover, .decrement:hover {
+    background-color: #218838;
+}
+
+.remove {
+    background-color: #dc3545;
+    color: white;
+}
+
+.remove:hover {
+    background-color: #c82333;
+}
+
+.total-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.discount-section {
+    background: #ffeeba;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.discount-section p {
+    margin: 5px 0;
+}
+
+.coupon-section {
+    margin-top: 20px;
+}
+
+.coupon-section input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.coupon-section button {
+    background-color: rgb(229, 158, 25);
+    color: black;
+    padding: 8px 12px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.apply-discount {
+    background-color: yellow;
+    color: black;
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.complete-purchase {
+    background-color: pink;
+    color: black;
+    padding: 10px 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.complete-purchase:hover {
+    background-color: #ff69b4;
+}
+.empty-cart{
+    color: #c82333;
+    font-size: 25px;
+}
