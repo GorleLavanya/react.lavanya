@@ -16,10 +16,6 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import NotFound from "./NotFount";
 
-
-
-
-
 function App()
 { 
   const dispatch = useDispatch();

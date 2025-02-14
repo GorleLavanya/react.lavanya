@@ -78,7 +78,7 @@ return(
                         {currentItems.map((item, index) => (
                             <li key={index} className="nonveg-item">
                                 <img 
-                                    src={item.image} // Use default image if missing
+                                    src={item.image} 
                                     alt={item.name}
                                     className="nonveg-image"
                                     width="100"
@@ -91,7 +91,7 @@ return(
                         ))}
                     </ul>
                 ) : (
-                    <p>No Veg Items Available</p>
+                    <p>No  NonVeg Items Available</p>
                 )}
                 </div>
 

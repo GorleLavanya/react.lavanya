@@ -1,112 +1,99 @@
-/* Container styling */
+/* Milk.css */
+
 .milk-container {
-    padding: 30px;
-    background-color: #f0f8ff;
-    border-radius: 10px;
-    width: 100%;
-    margin: auto;
-    text-align: center;
-  }
-  
-  /* Heading */
-  h1 {
-    color: darkblue;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Filter Section */
-  .filter-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-  }
-  
-  .filter-container label {
-    font-size: 16px;
-  }
-  
-  input[type="checkbox"] {
-    margin-right: 5px;
-  }
-  
-  /* Search Bar */
-  .search-container {
-    margin-bottom: 20px;
-  }
-  
-  input[type="text"] {
-    width: 50%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  /* Milk List */
-  .milk-list ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .milk-list li {
-    background-color: white;
-    margin: 10px auto;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-  }
-  
-  .milk-list button {
-    background-color: darkblue;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .milk-list button:hover {
-    background-color: blue;
-  }
-  
-  /* Pagination Buttons */
-  .pagination {
-    margin-top: 20px;
-  }
-  
-  button {
-    margin: 5px;
-    padding: 8px 12px;
-    border: none;
-    background-color: blue;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: darkblue;
-  }
-  
-  button:disabled {
-    background-color: grey;
-    cursor: not-allowed;
-  }
-  .milk-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
 }
 
-.milk-image {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 8px;
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
-  
+
+/* Filter and search section */
+.filter-container, .search-container {
+  margin-bottom: 20px;
+}
+
+.filter-container label {
+  margin-right: 15px;
+  font-size: 1rem;
+}
+
+.search-container input {
+  padding: 8px;
+  width: 250px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Grid layout for items (Ensures images stay side by side) */
+.milk-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px;
+  padding: 10px;
+  width: 80%;
+  max-width: 1000px;
+  justify-content: center;
+}
+
+.milk-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: contents; /* Allows the list items to follow the grid layout */
+}
+
+/* Individual item */
+.milk-item {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Image styles */
+.milk-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+/* Button styles */
+button {
+  background-color: #3bb4d6;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #001be5;
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border-radius: 5px;
+}

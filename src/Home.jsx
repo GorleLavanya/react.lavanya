@@ -2,6 +2,7 @@ import { createSelector } from "@reduxjs/toolkit";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./Home.css";
+import { addToCart } from "./store";
 
 function Home()
 {
@@ -80,14 +81,9 @@ const selectAllItems = createSelector(
                <div>
                 <h5 >{item.name}</h5>
                 <p >₹{item.price}</p>
-                <button
-              onClick={() => dispatch(addToCart(item))}
-              
-            >
-              🛒 Add to Cart
-            </button>
-          </div>
-          </div>
+                <button onClick={() => dispatch(addToCart(item))}>🛒 Add to Cart </button>
+              </div>
+                </div>
             </div>
           ))
         ) : (

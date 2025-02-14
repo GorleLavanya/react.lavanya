@@ -40,6 +40,7 @@ function Veg()
         }
     return(
             <>
+            <div className="veg-container">
             <h1>VegItems....</h1>
              {/* Checkbox filters */}
              <div className="filter-container">
@@ -105,7 +106,7 @@ function Veg()
       ))}
      <button onClick={() => handlePage(pagenumber + 1)} disabled={pagenumber === totalPages}> Next</button>
      </div>
-     
+     </div>
          </>
         )
     }

@@ -2,13 +2,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { addPurchaseDetails, clearCart, decrement, increment, remove } from "./store";
 import { useState } from "react";
 import "./Cart.css";
+import { useNavigate } from "react-router-dom";
 
 
 function Cart()
     { 
         let dispatch=useDispatch()
+        const navigate = useNavigate(); // Hook for navigation
         //get the cart items from store
         let  carts=useSelector(state=>state.cart);
+        const isAuthenticated = useSelector(state => state.auth.isAuthenticated); // Get auth state
+
         //convert the above object into List items
          let cartItems=carts.map((item,index)=>(
             <li key={index} className="cart-item">
@@ -57,6 +61,10 @@ function Cart()
 
         //
         let handleCompletePurchase=()=>{
+          if (!isAuthenticated) {
+            navigate('/login'); // Redirect to login page if not authenticated
+            return;
+          }
           let purchaseDate=new Date().toLocaleDateString();
           let purchaseDetails={
             date:purchaseDate,
@@ -68,6 +76,8 @@ function Cart()
 
           //clear the cart
           dispatch(clearCart());
+          alert('Purchase Completed Successfully!');
+
        }
          return(
             <>
