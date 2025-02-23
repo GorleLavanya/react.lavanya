@@ -1,6 +1,6 @@
 /* Cart Component Styles */
 .cart-container {
-    width: 60%;
+    width: 1200px;
     margin: auto;
     padding: 20px;
     border: 1px solid #ddd;
@@ -8,6 +8,7 @@
     background: #f9f9f9;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-top: 30px;
 }
 
 .cart-container h1 {
@@ -16,28 +17,33 @@
     margin-bottom: 20px;
 }
 
-.cart-items {
-    list-style: none;
-    padding: 0;
-}
+.cart-item {
+    margin-bottom: 20px; /* Increase spacing between items */
+    padding: 10px;       /* Optional: add padding inside each item */
+    border-bottom: 1px solid #ccc; /* Optional: add a visual separator */
+    
+  }
+  
 
 .cart-items li {
     background: #fff;
     margin: 10px 0;
-    padding: 10px;
+    padding: 5px;
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 17px;
+
 }
 
 .cart-items button {
-    padding: 5px 10px;
+    padding: 5px 5px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .increment, .decrement {
@@ -65,10 +71,11 @@
 }
 
 .discount-section {
-    background: #ffeeba;
+
     padding: 10px;
     border-radius: 8px;
     margin-top: 10px;
+    font-size:x-large;
 }
 
 .discount-section p {
@@ -94,6 +101,15 @@
     cursor: pointer;
     font-weight: bold;
 }
+.net-amount {
+    color: #2A9D8F;             /* Text color */
+    background-color: #F1FAEE;  /* Background color */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
 
 .apply-discount {
     background-color: yellow;
@@ -120,7 +136,43 @@
 .complete-purchase:hover {
     background-color: #ff69b4;
 }
-.empty-cart{
-    color: #c82333;
-    font-size: 25px;
-}
+/* Style for the container when the cart is empty */
+.empty-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure this container fills the viewport */
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+.increase-button {
+    width: 40px;        /* Increase button width */
+    height: 40px;       /* Increase button height */
+    font-size: 20px;    /* Increase the font size of the text */
+    font-weight: bold;  /* Optional: make the text bold */
+    border-radius: 5px; /* Optional: add rounded corners */
+    cursor: pointer;    /* Optional: change cursor on hover */
+    background-color: #4CAF50; /* Optional: green background color */
+    color: white;       /* Optional: white text */
+    border: none;       /* Optional: remove default border */
+  }
+.coupon-discount {
+    background-color: #f9f9f9;  /* Light background for contrast */
+    padding: 15px;
+  }
+  
+.coupon-discount p {
+    font-size: 16px;
+  }
+  
+.coupon-discount p:first-child {
+    color: #2A9D8F; /* Teal color for the coupon code text */
+  }
+  
+.coupon-discount p:last-child {
+    color: #E76F51; /* Coral color for the discount amount text */
+  }
+  
+  

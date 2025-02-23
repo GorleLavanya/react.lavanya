@@ -10,8 +10,9 @@ function Orders()
         let finalData=purchaseHistory.map((item,index)=>(
             <div key={index}>
                 {/*date &totalprice directly calling*/}
-             <p>Date:{item.date}</p>
-             <p>TotalAmount:${item.totalPrice.toFixed(2)}</p>
+                <p className="date">Date: {item.date}</p>
+                <p className="total-amount">Total Amount: ${item.totalPrice.toFixed(2)}</p>
+
             
             {/*all items are reading use Map */}
             <ul>

@@ -14,15 +14,18 @@ function Cart()
         const isAuthenticated = useSelector(state => state.auth.isAuthenticated); // Get auth state
 
         //convert the above object into List items
-         let cartItems=carts.map((item,index)=>(
-            <li key={index} className="cart-item">
-                {item.name} -  {item.price}   
-                 <button  onClick={()=>dispatch(increment(item))}>  + </button>
-                 <button  onClick={()=>dispatch(decrement(item))}>  - </button>
-                Quantity:{item.quantity}
-               <button  onClick={()=>dispatch(remove(item))}> Remove </button>
-            </li>
-         ))
+        let cartItems = carts.map((item, index) => (
+          <li key={index} className="cart-item">
+            {item.name} - {item.price}
+            <button 
+              className="increase-button" 
+              onClick={() => dispatch(increment(item))}>+</button>
+              <button className="increase-button" onClick={() => dispatch(decrement(item))}>-</button>
+              <p> Quantity: {item.quantity}</p>
+               <button onClick={() => dispatch(remove(item))}>Remove</button>
+          </li>
+        ));
+        
          //Calculate the totalPrice
          const totalPrice=carts.reduce((sum,item)=> sum+item.quantity*item.price,0);
          //Set the Discount Percentage
@@ -118,7 +121,9 @@ function Cart()
             <button className="complete-purchase" onClick={handleCompletePurchase}>Complete Purchase</button>
             </div>
             :
-            <p className="empty-cart">your Cart is Empty</p>
+            <div className="empty-cart">
+             <p>Your Cart is Empty</p>
+            </div>
             }
              </>
         )

@@ -33,9 +33,10 @@ function App()
     <Link to='/nonveg'className="Linkstyle"><i class="fa-solid fa-drumstick-bite"></i>NonVeg</Link>
     <Link to='/milk'className="Linkstyle"><i class="fa-solid fa-cow"></i>Milk</Link>
     <Link to='/cart'className="Linkstyle">Cart<i class="fa-solid fa-cart-shopping"></i><span>{totalItems}</span></Link>
-    <Link to='/orders'className="Linkstyle"><i class="fa-brands fa-first-order"></i>Orders</Link>
+    <Link to='/orders'className="Linkstyle"><i class="fa-solid fa-bag-shopping"></i>Orders</Link>
     <Link to='/about'className="Linkstyle"><i class="fa-solid fa-address-card"></i>AboutUs</Link>
-    <Link to='/contact'className="Linkstyle"><i class="fa-solid fa-address-book"></i>ContactUs</Link>
+    <Link to='/contact'className="Linkstyle"><i class="fa-solid fa-phone-volume"></i>ContactUs</Link>
+    
     
 
     <div>
@@ -59,7 +60,9 @@ function App()
       <Route path="/about" element={<AboutUs/>}/>
       <Route path="/contact" element={<ContactUs/>}/>
       <Route path="/login" element={<Logins/>}/>
+      
       <Route path="*" element={<NotFound/>}/>
+
     </Routes>
     </BrowserRouter>
     </>
